@@ -81,11 +81,10 @@
             <section id="notas-fiscais" style="display: none">
                 <h2>Notas Fiscais</h2>
                 <div class="filters">
-                    <label for="filtro-por-mes"
+                    <label for="filtro-por-mes-de-emissao"
                         >Filtrar por mês de emissão:</label
                     >
-                    <select id="filtro-por-mes">
-                        <!-- Opções de meses -->
+                    <select id="filtro-por-mes-de-emissao">
                         <option>Selecionar mês</option>
                         <option value="1">Janeiro</option>
                         <option value="2">Fevereiro</option>
@@ -99,6 +98,57 @@
                         <option value="10">Outubro</option>
                         <option value="11">Novembro</option>
                         <option value="12">Dezembro</option>
+                    </select>
+
+                    <label for="filtro-por-mes-de-cobranca"
+                        >Filtrar por mês de cobrança:</label
+                    >
+                    <select id="filtro-por-mes-de-cobranca">
+                        <option>Selecionar mês</option>
+                        <option value="1">Janeiro</option>
+                        <option value="2">Fevereiro</option>
+                        <option value="3">Março</option>
+                        <option value="4">Abril</option>
+                        <option value="5">Maio</option>
+                        <option value="6">Junho</option>
+                        <option value="7">Julho</option>
+                        <option value="8">Agosto</option>
+                        <option value="9">Setembro</option>
+                        <option value="10">Outubro</option>
+                        <option value="11">Novembro</option>
+                        <option value="12">Dezembro</option>
+                    </select>
+
+                    <label for="filtro-por-mes-de-pagamento"
+                        >Filtrar por mês de pagamento:</label
+                    >
+                    <select id="filtro-por-mes-de-pagamento">
+                        <option>Selecionar mês</option>
+                        <option value="1">Janeiro</option>
+                        <option value="2">Fevereiro</option>
+                        <option value="3">Março</option>
+                        <option value="4">Abril</option>
+                        <option value="5">Maio</option>
+                        <option value="6">Junho</option>
+                        <option value="7">Julho</option>
+                        <option value="8">Agosto</option>
+                        <option value="9">Setembro</option>
+                        <option value="10">Outubro</option>
+                        <option value="11">Novembro</option>
+                        <option value="12">Dezembro</option>
+                    </select>
+                    <select id="filtro-por-status">
+                        <option value="Status da Nota">Status da Nota</option>
+                        <option value="Emitida">Emitida</option>
+                        <option value="Cobrança realizada">
+                            Cobrança realizada
+                        </option>
+                        <option value="Pagamento em atraso">
+                            Pagamento em atraso
+                        </option>
+                        <option value="Pagamento realizado">
+                            Pagamento realizado
+                        </option>
                     </select>
                     <div id="notas-list"></div>
                 </div>
