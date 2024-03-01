@@ -179,7 +179,10 @@
         color: var(--brand-2-cor);
     }
 }
-
+/* Gráficos */
+canvas {
+    margin-top: 60px;
+}
 /* Footer */
 #footer {
     background-color: var(--preto-0-cor);
@@ -216,5 +219,11 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    canvas {
+        /* margin-top: 60px; */
+        width: 80% !important;
+        max-height: 350px !important;
     }
 }
