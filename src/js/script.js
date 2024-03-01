@@ -6,8 +6,8 @@ import { trocaFiltro } from "./filtros.js";
 import { trocaNav } from "./nav.js";
 import { mostrarNotasFiscais } from "./notasFiscais.js";
 
-$("#dashboard-link").on("click", mostrarDashboard);
-$("#notas-link").on("click", mostrarNotasFiscais);
+$(".dashboard-link").on("click", mostrarDashboard);
+$(".notas-link").on("click", mostrarNotasFiscais);
 
 $("#btn-menu-mobile").on("click", trocaNav);
 $(".botao-filtro").on("click", trocaFiltro);

@@ -5,6 +5,9 @@ import { atualizarGraficos } from "./graficos.js";
 export const mostrarDashboard = () => {
     $("#notas-fiscais").hide();
     $("#dashboard").show();
+
+    $(".dashboard-link-aside").toggleClass("ativou");
+    $(".notas-link-aside").removeClass("ativou");
 };
 
 $("#select-ano, #select-trimestre, #select-mes").change(() => {
