@@ -1,0 +1,30 @@
+:root {
+    /* Font family */
+    --font: "Urbanist", sans-serif;
+
+    /* Colors */
+    --brand-1-cor: #45392f;
+    --brand-2-cor: #9c6131;
+
+    --branco-0-cor: #ffffff;
+    --branco-1-cor: #d9d9d9;
+
+    --preto-0-cor: #000000;
+
+    --cinza-0-cor: #646464;
+    --cinza-1-cor: #4d4d4d;
+
+    --shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
+
+    /* Typography */
+    --fonte-30: 1.875rem;
+    --fonte-20: 1.25rem;
+    --fonte-16: 1rem;
+    --fonte-12: 0.75rem;
+
+    /* Weights */
+    --bold: 700;
+    --semiBold: 600;
+    --medium: 500;
+    --regular: 400;
+}

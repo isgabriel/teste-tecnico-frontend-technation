@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Chart.js - Biblioteca de gráficos -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <link rel="stylesheet" href="./src/styles/reset.css" />
+        <link rel="stylesheet" href="./src/styles/globals.css" />
+        <link rel="stylesheet" href="./src/styles/style.css" />
+
+        <title>TechNation Finanças</title>
+    </head>
+    <body>
+        <header id="header">
+            <section class="header-mobile">
+                <a href="#">
+                    <img src="./src/assets/logo/logo-black.svg" alt="Logo" />
+                </a>
+                <button id="btn-menu-mobile" class="btn-menu-mobile">
+                    <img
+                        src="./src/assets/icones/menu-hamburguer-icone.svg"
+                        alt="Menu Hamburguer"
+                        class="svg-menu-mobile"
+                    />
+                </button>
+                <div>
+                    <img src="./src/assets/icones/usuario-icone.svg" alt="" />
+                    <div>
+                        <h3>Gabriel Montenegro</h3>
+                        <p>Desenvolvedor de Software</p>
+                    </div>
+                </div>
+            </section>
+            <nav class="nav-menu">
+                <ul>
+                    <li>
+                        <a
+                            href="#"
+                            id="dashboard-link"
+                            class="dashboard-link nav-item"
+                        >
+                            Dashboard</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#" id="notas-link" class="notas-link nav-item">
+                            Notas Fiscais
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <aside class="col-md-3" id="aside">
+            <img src="./src/assets/logo/logo-white.svg" alt="Logo Technation" />
+            <ul>
+                <li>
+                    <a
+                        href="#"
+                        id="dashboard-link"
+                        class="dashboard-link dashboard-link-aside ativou"
+                    >
+                        <img
+                            src="./src/assets/icones/dashboard-icone.svg"
+                            alt=""
+                        />
+                        Dashboard</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="#"
+                        id="notas-link"
+                        class="notas-link notas-link-aside"
+                    >
+                        <img
+                            src="./src/assets/icones/notas-fiscais-icone.svg"
+                            alt=""
+                        />
+                        Notas Fiscais
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <main id="main">
+            <section id="dashboard">
+                <h2>Dashboard</h2>
+                <button id="botao-filtro" class="botao-filtro">
+                    FILTROS
+                    <img
+                        id="svg-filtro"
+                        class="svg-filtro"
+                        src="./src/assets/icones/filtro-icone.svg"
+                        alt="Ícone botão de filtrar"
+                    />
+                </button>
+                <div class="filtros-container">
+                    <form action="" class="filtro-form form-dash">
+                        <!-- <label for="select-mes">Filtrar por mês</label> -->
+                        <select id="select-mes">
+                            <option value="00">Selecionar mês</option>
+                            <option value="01">Janeiro</option>
+                            <option value="02">Fevereiro</option>
+                            <option value="03">Março</option>
+                            <option value="04">Abril</option>
+                            <option value="05">Maio</option>
+                            <option value="06">Junho</option>
+                            <option value="07">Julho</option>
+                            <option value="08">Agosto</option>
+                            <option value="09">Setembro</option>
+                            <option value="10">Outubro</option>
+                            <option value="11">Novembro</option>
+                            <option value="12">Dezembro</option>
+                        </select>
+
+                        <select id="select-ano">
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                        </select>
+
+                        <select id="select-trimestre">
+                            <option value="0">Selecionar trimestre</option>
+                            <option value="1">1º Trimestre</option>
+                            <option value="2">2º Trimestre</option>
+                            <option value="3">3º Trimestre</option>
+                            <option value="4">4º Trimestre</option>
+                        </select>
+                    </form>
+                </div>
+
+                <ul class="listas">
+                    <li>
+                        <p id="quantidade-emitidas">
+                            Quantidade de notas emitidas:
+                        </p>
+                    </li>
+                    <li>
+                        <p id="quantidade-vencidas">
+                            Quantidade de notas vencidas:
+                        </p>
+                    </li>
+                    <li>
+                        <p id="quantidade-a-vencer">
+                            Quantidade de notas a vencer:
+                        </p>
+                    </li>
+                    <li>
+                        <p id="quantidade-pagas">Quantidade de notas pagas:</p>
+                    </li>
+                </ul>
+
+                <canvas
+                    id="grafico-inadimplencia"
+                    width="400"
+                    height="200"
+                ></canvas>
+                <canvas id="grafico-receita" width="400" height="200"></canvas>
+            </section>
+            <section id="notas-fiscais" style="display: none">
+                <h2>Notas Fiscais</h2>
+                <button id="botao-filtro" class="botao-filtro">
+                    FILTROS
+                    <img
+                        id="svg-filtro"
+                        src="./src/assets/icones/filtro-icone.svg"
+                        alt="Ícone botão de filtrar"
+                        class="svg-filtro"
+                    />
+                </button>
+                <div class="filtros-container">
+                    <form action="" class="filtro-form">
+                        <div>
+                            <label for="filtro-por-mes-de-emissao"
+                                >Filtrar por mês de emissão</label
+                            >
+                            <select id="filtro-por-mes-de-emissao">
+                                <option>Selecionar mês</option>
+                                <option value="1">Janeiro</option>
+                                <option value="2">Fevereiro</option>
+                                <option value="3">Março</option>
+                                <option value="4">Abril</option>
+                                <option value="5">Maio</option>
+                                <option value="6">Junho</option>
+                                <option value="7">Julho</option>
+                                <option value="8">Agosto</option>
+                                <option value="9">Setembro</option>
+                                <option value="10">Outubro</option>
+                                <option value="11">Novembro</option>
+                                <option value="12">Dezembro</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="filtro-por-mes-de-cobranca"
+                                >Filtrar por mês de cobrança</label
+                            >
+                            <select id="filtro-por-mes-de-cobranca">
+                                <option>Selecionar mês</option>
+                                <option value="1">Janeiro</option>
+                                <option value="2">Fevereiro</option>
+                                <option value="3">Março</option>
+                                <option value="4">Abril</option>
+                                <option value="5">Maio</option>
+                                <option value="6">Junho</option>
+                                <option value="7">Julho</option>
+                                <option value="8">Agosto</option>
+                                <option value="9">Setembro</option>
+                                <option value="10">Outubro</option>
+                                <option value="11">Novembro</option>
+                                <option value="12">Dezembro</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="filtro-por-mes-de-pagamento"
+                                >Filtrar por mês de pagamento</label
+                            >
+                            <select id="filtro-por-mes-de-pagamento">
+                                <option>Selecionar mês</option>
+                                <option value="1">Janeiro</option>
+                                <option value="2">Fevereiro</option>
+                                <option value="3">Março</option>
+                                <option value="4">Abril</option>
+                                <option value="5">Maio</option>
+                                <option value="6">Junho</option>
+                                <option value="7">Julho</option>
+                                <option value="8">Agosto</option>
+                                <option value="9">Setembro</option>
+                                <option value="10">Outubro</option>
+                                <option value="11">Novembro</option>
+                                <option value="12">Dezembro</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="filtro-por-status"
+                                >Filtrar por status</label
+                            >
+                            <select id="filtro-por-status">
+                                <option value="Status da Nota">
+                                    Status da Nota
+                                </option>
+                                <option value="Emitida">Emitida</option>
+                                <option value="Cobrança realizada">
+                                    Cobrança realizada
+                                </option>
+                                <option value="Pagamento em atraso">
+                                    Pagamento em atraso
+                                </option>
+                                <option value="Pagamento realizado">
+                                    Pagamento realizado
+                                </option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <ul id="notas-list" class="listas"></ul>
+            </section>
+        </main>
+
+        <footer id="footer">2024 © Todos os direitos reservados</footer>
+
+        <script type="module" src="./src/js/script.js"></script>
+    </body>
+</html>
