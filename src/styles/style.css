@@ -1,1 +1,64 @@
+/* Filtros */
+.filtros-container {
+    width: 100%;
+}
 
+.filtros-container.ativo .filtro-form {
+    height: 176px;
+
+    margin-bottom: 50px;
+
+    visibility: visible;
+    opacity: 1;
+}
+
+.filtro-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    width: 100%;
+    height: 0rem;
+    right: 0rem;
+
+    transition: 0.6s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+/* Botão filtros */
+.botao-filtro {
+    color: var(--branco-0-cor);
+    background-color: var(--preto-0-cor);
+
+    border: none;
+    border-radius: 4px;
+
+    width: 310px;
+    height: 48px;
+
+    font-size: var(--fonte-16);
+
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 9.7px;
+
+    transition: 0.6s;
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+.botao-filtro.ativo {
+    color: var(--preto-0-cor);
+    background-color: var(--branco-0-cor);
+
+    border: 2px solid var(--preto-0-cor);
+}
+#svg-filtro {
+    width: 17px;
+}

@@ -1,6 +1,6 @@
 :root {
     /* Font family */
-    --font: "Urbanist", sans-serif
+    --font: "Urbanist", sans-serif;
 
     /* Colors */
     --brand-1-cor: #45392f;
@@ -14,13 +14,13 @@
     --cinza-0-cor: #646464;
     --cinza-1-cor: #4d4d4d;
 
-    --shadow: 0px 1px 0px rgba(0,0,0,0.25);
+    --shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
 
     /* Typography */
-    --fonte-30: 1.875rem; 
-    --fonte-20: 1.25rem; 
-    --fonte-16: 1rem; 
-    --fonte-12: .75rem; 
+    --fonte-30: 1.875rem;
+    --fonte-20: 1.25rem;
+    --fonte-16: 1rem;
+    --fonte-12: 0.75rem;
 
     /* Weights */
     --bold: 700;
