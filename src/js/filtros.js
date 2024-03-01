@@ -1,6 +1,15 @@
 import { criaCard } from "./criaCards.js";
 import { notasFiscais } from "./database.js";
 
+export const trocaFiltro = () => {
+    $(".filtros-container").toggleClass("ativo");
+    $(".botao-filtro").toggleClass("ativo");
+    $(".svg-filtro").toggleClass("ativo");
+
+    $(".svg-filtro").hasClass("ativo")
+        ? $(".svg-filtro").attr("src", "/src/assets/icones/btn-fecha.svg")
+        : $(".svg-filtro").attr("src", "/src/assets/icones/filtro-icone.svg");
+};
 export const filtrarNotas = (ano, trimestre, mes) => {
     return notasFiscais.filter((nota) => {
         let anoEmissao = nota.emissao.substring(0, 4);
