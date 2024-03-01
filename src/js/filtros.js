@@ -1,6 +1,28 @@
 import { criaCard } from "./criaCards.js";
 import { notasFiscais } from "./database.js";
 
+export const filtrarNotas = (ano, trimestre, mes) => {
+    return notasFiscais.filter((nota) => {
+        let anoEmissao = nota.emissao.substring(0, 4);
+        let mesEmissao = nota.emissao.substring(5, 7);
+        let trimestreEmissao = Math.ceil(parseInt(mesEmissao) / 3);
+
+        return (
+            anoEmissao === ano &&
+            (trimestre === "0" || trimestreEmissao.toString() === trimestre) &&
+            (mes === "00" || mesEmissao === mes)
+        );
+    });
+};
+
+export const filtrarNotasPorStatus = (notas, status) => {
+    const notasFiltradas = notas.filter((nota) => {
+        return status.includes(nota.status);
+    }).length;
+
+    return notasFiltradas;
+};
+
 export const filtrarPorMesDeEmissao = (mes) => {
     if (mes === "Selecionar mês") {
         criaCard(notasFiscais);

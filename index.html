@@ -69,14 +69,42 @@
         <main id="main">
             <section id="dashboard">
                 <h2>Dashboard</h2>
-                <div class="indicators">
-                    <h3>Indicadores</h3>
-                    <p id="total-emitido"></p>
-                    <p id="total-emitido-sem-cobranca"></p>
-                    <p id="total-vencido"></p>
-                    <p id="total-a-vencer"></p>
-                    <p id="total-pagas"></p>
-                </div>
+                <label for="select-mes">Filtrar por mês</label>
+                <select id="select-mes">
+                    <option value="00">Selecionar mês</option>
+                    <option value="01">Janeiro</option>
+                    <option value="02">Fevereiro</option>
+                    <option value="03">Março</option>
+                    <option value="04">Abril</option>
+                    <option value="05">Maio</option>
+                    <option value="06">Junho</option>
+                    <option value="07">Julho</option>
+                    <option value="08">Agosto</option>
+                    <option value="09">Setembro</option>
+                    <option value="10">Outubro</option>
+                    <option value="11">Novembro</option>
+                    <option value="12">Dezembro</option>
+                </select>
+
+                <select id="select-ano">
+                    <!-- <option value="0">Selecionar ano</option> -->
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                    <!-- Adicione os demais anos conforme necessário -->
+                </select>
+
+                <select id="select-trimestre">
+                    <option value="0">Selecionar trimestre</option>
+                    <option value="1">1º Trimestre</option>
+                    <option value="2">2º Trimestre</option>
+                    <option value="3">3º Trimestre</option>
+                    <option value="4">4º Trimestre</option>
+                </select>
+
+                <p id="quantidade-emitidas">Quantidade de notas emitidas:</p>
+                <p id="quantidade-vencidas">Quantidade de notas vencidas:</p>
+                <p id="quantidade-a-vencer">Quantidade de notas a vencer:</p>
+                <p id="quantidade-pagas">Quantidade de notas pagas:</p>
             </section>
             <section id="notas-fiscais" style="display: none">
                 <h2>Notas Fiscais</h2>
@@ -137,6 +165,10 @@
                         <option value="11">Novembro</option>
                         <option value="12">Dezembro</option>
                     </select>
+
+                    <label for="filtro-por-status"
+                        >Filtrar por status da nota:</label
+                    >
                     <select id="filtro-por-status">
                         <option value="Status da Nota">Status da Nota</option>
                         <option value="Emitida">Emitida</option>
