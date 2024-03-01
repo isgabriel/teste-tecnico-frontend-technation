@@ -23,6 +23,8 @@
             href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;500;600;700&display=swap"
             rel="stylesheet"
         />
+        <!-- Chart.js - Biblioteca de gráficos -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
         <link rel="stylesheet" href="./src/styles/reset.css" />
         <link rel="stylesheet" href="./src/styles/globals.css" />
@@ -87,8 +89,8 @@
                 </select>
 
                 <select id="select-ano">
-                    <option value="2024">2024</option>
                     <option value="2023">2023</option>
+                    <option value="2022">2022</option>
                 </select>
 
                 <select id="select-trimestre">
@@ -103,6 +105,13 @@
                 <p id="quantidade-vencidas">Quantidade de notas vencidas:</p>
                 <p id="quantidade-a-vencer">Quantidade de notas a vencer:</p>
                 <p id="quantidade-pagas">Quantidade de notas pagas:</p>
+
+                <canvas
+                    id="grafico-inadimplencia"
+                    width="400"
+                    height="200"
+                ></canvas>
+                <canvas id="grafico-receita" width="400" height="200"></canvas>
             </section>
             <section id="notas-fiscais" style="display: none">
                 <h2>Notas Fiscais</h2>
