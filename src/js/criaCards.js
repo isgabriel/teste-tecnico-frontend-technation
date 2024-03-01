@@ -4,39 +4,66 @@ export const criaCard = (notas) => {
     notas.forEach((nota) => {
         const notaFiscal = document.createElement("li");
 
-        const pagador = document.createElement("h3");
-        pagador.innerText = `Pagador: ${nota.pagador}`;
+        const titulo = document.createElement("h3");
+        titulo.innerText = "Pagador: ";
 
-        const emissao = document.createElement("p");
-        emissao.innerText = `Data de Emissão: ${nota.emissao}`;
+        const pagador = document.createElement("span");
+        pagador.innerText = `${nota.pagador}`;
 
-        const cobranca = document.createElement("p");
-        cobranca.innerText = `Data de Cobrança: ${nota.cobranca}`;
+        const tituloEmissao = document.createElement("h3");
+        tituloEmissao.innerText = "Data de Emissão: ";
+        const emissao = document.createElement("span");
+        emissao.innerText = `${nota.emissao}`;
 
-        const pagamento = document.createElement("p");
-        pagamento.innerText = `Data de Pagamento: ${nota.pagamento}`;
+        const tituloCobranca = document.createElement("h3");
+        tituloCobranca.innerText = "Data de Cobrança: ";
+        const cobranca = document.createElement("span");
+        cobranca.innerText = `${nota.cobranca}`;
 
-        const valor = document.createElement("p");
-        valor.innerText = `Valor: ${nota.valor}`;
+        const tituloPagamento = document.createElement("h3");
+        tituloPagamento.innerText = "Data de Pagamento: ";
+        const pagamento = document.createElement("span");
+        pagamento.innerText = `${nota.pagamento}`;
 
-        const documentoNota = document.createElement("p");
-        documentoNota.innerText = `Documento(Nota): ${nota.documentoNota}`;
+        const tituloValor = document.createElement("h3");
+        tituloValor.innerText = "Valor: ";
+        const valor = document.createElement("span");
+        valor.innerText = `${nota.valor}`;
 
-        const documentoBoleto = document.createElement("p");
-        documentoBoleto.innerText = `Documento(Boleto): ${nota.documentoBoleto}`;
+        const tituloDocumentoNota = document.createElement("h3");
+        tituloDocumentoNota.innerText = "Documento (Nota Fiscal): ";
+        const documentoNota = document.createElement("span");
+        documentoNota.innerText = `${nota.documentoNota}`;
+        documentoNota.classList.add("documento-span");
 
+        const tituloDocumentoBoleto = document.createElement("h3");
+        tituloDocumentoBoleto.innerText = "Documento (Boleto Bancário): ";
+        const documentoBoleto = document.createElement("span");
+        documentoBoleto.innerText = `${nota.documentoBoleto}`;
+        documentoBoleto.classList.add("documento-span");
+
+        const tituloStatus = document.createElement("h3");
+        tituloStatus.innerText = "Status: ";
         const status = document.createElement("h4");
-        status.innerText = `Status: ${nota.status}`;
+        status.innerText = `${nota.status}`;
 
+        titulo.appendChild(pagador);
+        tituloEmissao.appendChild(emissao);
+        tituloCobranca.appendChild(cobranca);
+        tituloPagamento.appendChild(pagamento);
+        tituloValor.appendChild(valor);
+        tituloDocumentoNota.appendChild(documentoNota);
+        tituloDocumentoBoleto.appendChild(documentoBoleto);
+        tituloStatus.appendChild(status);
         notaFiscal.append(
-            pagador,
-            emissao,
-            cobranca,
-            pagamento,
-            valor,
-            documentoNota,
-            documentoBoleto,
-            status
+            titulo,
+            tituloEmissao,
+            tituloCobranca,
+            tituloPagamento,
+            tituloValor,
+            tituloDocumentoNota,
+            tituloDocumentoBoleto,
+            tituloStatus
         );
 
         $("#notas-list").append(notaFiscal);
