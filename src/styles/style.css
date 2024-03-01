@@ -1,3 +1,16 @@
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+#main section {
+    width: 90%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 /* Filtros */
 .filtros-container {
     width: 100%;
@@ -35,8 +48,9 @@
     border: none;
     border-radius: 4px;
 
-    width: 310px;
-    height: 48px;
+    width: 100%;
+    max-width: 280px;
+    height: 40px;
 
     font-size: var(--fonte-16);
 
@@ -61,4 +75,53 @@
 }
 #svg-filtro {
     width: 17px;
+}
+
+/* Formulário filtros */
+.filtros-container.ativo .filtro-form {
+    width: 100%;
+    max-width: 280px;
+
+    margin-bottom: 50px;
+
+    visibility: visible;
+    opacity: 1;
+}
+.filtro-form {
+    margin-top: 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    width: 100%;
+
+    height: 0rem;
+    right: 0rem;
+
+    transition: 0.6s;
+    visibility: hidden;
+    opacity: 0;
+}
+.filtro-form select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url(../assets/icones/select-abre.svg) no-repeat center right
+        24px;
+    font-size: 15px;
+    padding-right: 20px;
+
+    padding: 10px 0;
+    padding-left: 24px;
+    width: 260px;
+
+    border: 1px solid var(--preto-0-cor);
+    border-radius: 4px;
+}
+
+.filtro-form select.fecha-select {
+    background: url(../assets/icones/select-fecha.svg) no-repeat center right
+        30.26px;
 }
