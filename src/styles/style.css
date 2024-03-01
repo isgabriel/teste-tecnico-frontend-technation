@@ -17,12 +17,16 @@
 }
 
 .filtros-container.ativo .filtro-form {
-    height: 176px;
-
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
 
     visibility: visible;
     opacity: 1;
+}
+.filtros-container.ativo .form-dash {
+    height: 150px;
+}
+.filtros-container.ativo .form-notas {
+    height: 350px;
 }
 
 .filtro-form {
@@ -79,8 +83,10 @@
 
 /* Formulário filtros */
 .filtros-container.ativo .filtro-form {
+    select {
+        width: 280px;
+    }
     width: 100%;
-    max-width: 280px;
 
     margin-bottom: 50px;
 
@@ -110,18 +116,37 @@
     -moz-appearance: none;
     background: url(../assets/icones/select-abre.svg) no-repeat center right
         24px;
-    font-size: 15px;
-    padding-right: 20px;
 
-    padding: 10px 0;
-    padding-left: 24px;
-    width: 260px;
+    font-size: var(--fonte-16);
+
+    padding: 10px 0 10px 24px;
+
+    max-width: 280px;
 
     border: 1px solid var(--preto-0-cor);
     border-radius: 4px;
+
+    &:focus {
+        outline: 0;
+    }
 }
 
 .filtro-form select.fecha-select {
     background: url(../assets/icones/select-fecha.svg) no-repeat center right
-        30.26px;
+        24px;
+}
+
+@media (min-width: 768px) {
+    .filtro-form {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .filtros-container.ativo .form-dash {
+        height: auto;
+    }
+    .filtros-container.ativo .form-notas {
+        height: auto;
+    }
 }
