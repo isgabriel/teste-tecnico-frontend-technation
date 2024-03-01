@@ -1,5 +1,25 @@
+/* Header */
 #header {
 }
+
+/* Menu Header */
+#btn-menu-mobile {
+    display: flex;
+    background-color: transparent;
+    align-items: center;
+    border: none;
+}
+.nav-menu {
+    visibility: hidden;
+}
+.nav-menu.ativo {
+    visibility: visible;
+}
+
+/* #btn-menu-mobile.ativo {
+    background: url(../assets/icones/btn-fecha.svg) no-repeat center left 15px;
+} */
+/* Aside */
 #aside {
     visibility: hidden;
 

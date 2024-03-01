@@ -34,32 +34,41 @@
     </head>
     <body>
         <header id="header">
-            <section class="secao-menu-hamburguer-nome">
-                <div id="menu-hamburguer" class="menu-hamburguer">
-                    <p class="linha-menu"></p>
-                    <p class="linha-menu"></p>
-                    <p class="linha-menu"></p>
-                </div>
-                <nav class="menu-mobile">
-                    <ul id="menu-conteudo">
-                        <li value="dashboard" class="opcao">Dashboard</li>
-                        <li value="notas" class="opcao">Notas</li>
-                        <button class="fecha-menu">X</button>
-                    </ul>
-                </nav>
-                <h3 id="titulo">Titulo atual (dash/notas)</h3>
+            <section class="header-mobile">
+                <a href="#">
+                    <img src="/src/assets/logo/logo-black.svg" alt="Logo" />
+                </a>
+                <button id="btn-menu-mobile" class="btn-menu-mobile">
+                    <img
+                        src="/src/assets/icones/menu-hamburguer-icone.svg"
+                        alt="Menu Hamburguer"
+                        class="svg-menu-mobile"
+                    />
+                </button>
             </section>
-            <div>
-                <!-- <img
-                    src="https://w7.pngwing.com/pngs/627/693/png-transparent-computer-icons-user-user-icon.png"
-                    alt=""
-                    class="usuario-icone"
-                /> -->
-                <div>
-                    <p class="nome-usuario">Usuário</p>
-                    <p class="cargo-usuario">Desenvolvedor</p>
-                </div>
-            </div>
+            <nav class="nav-menu">
+                Menu Aberto
+                <ul>
+                    <li>
+                        <a href="#" id="dashboard-link" class="nav-item">
+                            <img
+                                src="/src/assets/icones/dashboard-icone.svg"
+                                alt=""
+                            />
+                            Dashboard</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#" id="notas-link" class="nav-item">
+                            <img
+                                src="/src/assets/icones/notas-fiscais-icone.svg"
+                                alt=""
+                            />
+                            Notas Fiscais
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </header>
         <aside class="col-md-3" id="aside">
             <img src="/src/assets/logo/logo-white.svg" alt="Logo Technation" />
