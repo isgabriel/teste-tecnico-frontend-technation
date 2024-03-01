@@ -1,0 +1,83 @@
+/* header */
+.secao-menu-hamburguer-nome {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    .menu-hamburguer {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        .linha-menu-hamburguer {
+            width: 28px;
+            height: 2px;
+            background-color: black;
+        }
+    }
+}
+.usuario-icone {
+    width: 48px;
+    height: 48px;
+}
+/* menu mobile header */
+.mobile-menu {
+    display: none;
+}
+
+/* Estilos para o ícone do menu hambúrguer */
+.menu-toggle {
+    display: block;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 5px 0;
+}
+
+.opcao {
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Estilo para a opção selecionada */
+.opcao.selecionada {
+    background-color: #007bff; /* Azul */
+    color: green; /* Texto branco */
+}
+
+/* aside */
+.menu-mobile {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+
+    > li {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+
+        &:hover {
+            color: #f1f1f1;
+        }
+    }
+}
+.menu-desktop {
+    display: none;
+
+    @media (min-width: 769px) {
+        display: block;
+    }
+}
