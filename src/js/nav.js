@@ -3,10 +3,10 @@ export function trocaNav() {
     $("#btn-menu-mobile").toggleClass("ativo");
 
     $(".nav-menu").hasClass("ativo")
-        ? $(".svg-menu-mobile").attr("src", "/src/assets/icones/btn-fecha.svg")
+        ? $(".svg-menu-mobile").attr("src", "./src/assets/icones/btn-fecha.svg")
         : $(".svg-menu-mobile").attr(
               "src",
-              "/src/assets/icones/menu-hamburguer-icone.svg"
+              "./src/assets/icones/menu-hamburguer-icone.svg"
           );
 }
 
@@ -17,7 +17,7 @@ $(".nav-item").each(function () {
         $(".svg-menu-mobile").removeClass("ativo");
         $(".svg-menu-mobile").attr(
             "src",
-            "/src/assets/icones/menu-hamburguer-icone.svg"
+            "./src/assets/icones/menu-hamburguer-icone.svg"
         );
     });
 });

@@ -7,8 +7,8 @@ export const trocaFiltro = () => {
     $(".svg-filtro").toggleClass("ativo");
 
     $(".svg-filtro").hasClass("ativo")
-        ? $(".svg-filtro").attr("src", "/src/assets/icones/btn-fecha.svg")
-        : $(".svg-filtro").attr("src", "/src/assets/icones/filtro-icone.svg");
+        ? $(".svg-filtro").attr("src", "./src/assets/icones/btn-fecha.svg")
+        : $(".svg-filtro").attr("src", "./src/assets/icones/filtro-icone.svg");
 };
 export const filtrarNotas = (ano, trimestre, mes) => {
     return notasFiscais.filter((nota) => {
