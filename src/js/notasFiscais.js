@@ -11,7 +11,7 @@ export const mostrarNotasFiscais = () => {
     $("#dashboard").hide();
     $("#notas-fiscais").show();
 
-    $(".notas-link-aside").toggleClass("ativou");
+    $(".notas-link-aside").addClass("ativou");
     $(".dashboard-link-aside").removeClass("ativou");
 
     criaCard(notasFiscais);

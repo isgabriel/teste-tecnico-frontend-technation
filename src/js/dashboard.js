@@ -6,7 +6,7 @@ export const mostrarDashboard = () => {
     $("#notas-fiscais").hide();
     $("#dashboard").show();
 
-    $(".dashboard-link-aside").toggleClass("ativou");
+    $(".dashboard-link-aside").addClass("ativou");
     $(".notas-link-aside").removeClass("ativou");
 };
 
