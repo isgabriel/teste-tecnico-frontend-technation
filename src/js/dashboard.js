@@ -1,22 +1,28 @@
 import { notasFiscais } from "./database.js";
 import { filtrarNotas, filtrarNotasPorStatus } from "./filtros.js";
+import { atualizarGraficos } from "./graficos.js";
 
 export const mostrarDashboard = () => {
     $("#notas-fiscais").hide();
     $("#dashboard").show();
 };
+
 $("#select-ano, #select-trimestre, #select-mes").change(() => {
     atualizarIndicadoresDashboard();
 });
 
+$("#select-ano").change(() => {
+    atualizarGraficos();
+});
+
 export const atualizarIndicadoresDashboard = () => {
-    let anoSelecionado = $("#select-ano").val();
-    let trimestreSelecionado = $("#select-trimestre").val();
-    let mesSelecionado = $("#select-mes").val();
+    const anoSelecionado = $("#select-ano").val();
+    const trimestreSelecionado = $("#select-trimestre").val();
+    const mesSelecionado = $("#select-mes").val();
 
     let notasFiltradas;
     if (
-        anoSelecionado === "2024" &&
+        anoSelecionado === "2023" &&
         trimestreSelecionado === "0" &&
         mesSelecionado === "00"
     ) {
